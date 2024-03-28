@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        width: 300px;
+        height: 300px;
+        background: skyblue;
+        display: grid;
+        grid-template-rows: 100px;
+        grid-template-columns: repeat(3, 100px);
+        /* 总共一行三列 但是有 5 个 div 所有 4 和 5 div 的行高 是自动撑满的 不会是 100px 
+        
+        所以使用  grid-auto-flow: row声明隐式行高  grid-auto-rows: 130px;  
+
+        来限制隐式网格的行高  同样 grid-auto-flow: column; 
+        grid-auto-columns: 130px; 是用来声明隐式列宽的 */
+        grid-auto-flow: row;
+        grid-auto-rows: 130px;
+        > div {
+          background: pink;
+          border: 1px solid #000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>

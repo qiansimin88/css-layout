@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        height: 600px;
+        background: skyblue;
+        display: grid;
+        /* auto-fill 代表根据宽度自动填充相应个数
+        grid-template-columns: repeat(auto-fill, 100px); */
+
+        /* minmax 代表最小最大值 这里设置 那么网格在屏幕宽度足够的情况下 会以 100px
+        进行分割 如果宽度不够 那么就会以 1fr 进行自动计算分割 */
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-rows: 100px;
+        /* grid-gap: 10px 10px; */
+        > div {
+          background: pink;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <!-- <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div> -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        width: 300px;
+        height: 300px;
+        background: skyblue;
+        display: grid;
+        /* rows后面的值 代表的是行的高度   fr 代表等分的几份  */
+        /* grid-template-rows: 100px 50px 50px; */
+        grid-template-rows: 1fr 2fr 3fr;
+        /* columns 后面的值分别是三列的宽度 */
+        grid-template-columns: 50px 30% auto;
+        > div {
+          background: pink;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
+</html>

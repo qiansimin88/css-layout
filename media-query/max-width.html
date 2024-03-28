@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background: blue;
+      }
+
+      /* max-width: 1200px 代表最大宽度 1200px 则符合 */
+
+      /* 多条件 从大到小 
+      max-width PC优先  先写大的设备 在写小的宽度  */
+
+      @media (max-width: 1200px) {
+        .box {
+          background: red;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .box {
+          background: green;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

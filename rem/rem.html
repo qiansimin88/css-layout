@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      /* iphone6 下 保证 html的 font-size 为  26.666667vw （100 / 375(iphone6 物理尺寸) * 100 vw） 就等于 100px 然后所有的设计图 PX 除以 100 等于
+        正确的 REM  这样在不同的屏幕下 都是等比例缩放的 */
+
+      /* vscode 安装 px to rem 插件  然后 设置扩张设置 基本比列为 100px 然后全局 alt+z 即可
+    自动转换 rem */
+      font-size: 26.666667vw;
+    }
+    body {
+      font-size: 16px;
+    }
+    .box {
+      display: flex;
+      > .left {
+        width: 1rem;
+        background: skyblue;
+      }
+      > .right {
+        width: 2rem;
+        background: lightcoral;
+      }
+      > .center {
+        flex-grow: 1;
+        background: aquamarine;
+      }
+    }
+  </style>
+  <body>
+    <div class="box">
+      <div class="left">left</div>
+      <div class="center">center</div>
+      <div class="right">right</div>
+    </div>
+  </body>
+</html>

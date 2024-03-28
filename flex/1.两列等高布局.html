@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .main {
+        width: 600px;
+        display: flex;
+        height: 500px;
+        background: orange;
+        justify-content: space-between;
+      }
+      .main > div {
+        background: skyblue;
+      }
+      .main div:nth-of-type(1) {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- flex 布局默认 flex 包裹的 div 都是等高的  适合那种两列一直等高的布局 -->
+    <div class="main">
+      <div>
+        <p>dd</p>
+        <p>dd</p>
+      </div>
+      <div>dd</div>
+    </div>
+  </body>
+</html>

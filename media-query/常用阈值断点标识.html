@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 屏幕从小到大 依次消失div 移动端优先 */
+      .q-none {
+        display: none;
+      }
+      @media (min-width: 576px) {
+        .q-sm-none {
+          display: none;
+        }
+      }
+      @media (min-width: 768px) {
+        .q-md-none {
+          display: none;
+        }
+      }
+      @media (min-width: 992px) {
+        .q-lg-none {
+          display: none;
+        }
+      }
+      @media (min-width: 1200px) {
+        .q-xl-none {
+          display: none;
+        }
+      }
+      @media (min-width: 1400px) {
+        .q-xxl-none {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="q-none">1111</div>
+    <div class="q-sm-none">2222</div>
+    <div class="q-md-none">3333</div>
+    <div class="q-lg-none">4444</div>
+    <div class="q-xl-none">5555</div>
+    <div class="q-xxl-none">6666</div>
+  </body>
+</html>
